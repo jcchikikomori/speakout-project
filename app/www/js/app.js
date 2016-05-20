@@ -5,9 +5,6 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-
-/*global angular*/
-
 angular.module('starter', ['ionic', 'ionic-material', 'starter.controllers', 'starter.services'])
 
 .run(function($ionicPlatform) {
@@ -17,6 +14,7 @@ angular.module('starter', ['ionic', 'ionic-material', 'starter.controllers', 'st
     if (window.cordova && window.cordova.plugins && window.cordova.plugins.Keyboard) {
       cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
       cordova.plugins.Keyboard.disableScroll(true);
+
     }
     if (window.StatusBar) {
       // org.apache.cordova.statusbar required
@@ -32,94 +30,56 @@ angular.module('starter', ['ionic', 'ionic-material', 'starter.controllers', 'st
   // Set up the various states which the app can be in.
   // Each state's controller can be found in controllers.js
   $stateProvider
+
   // setup an abstract state for the tabs directive
-  .state('tab', {
+    .state('tab', {
     url: '/tab',
     abstract: true,
     templateUrl: 'templates/tabs.html'
   })
+
   // Each tab has its own nav history stack:
-  .state('tab.locate', {
-    url: '/locate',
+
+  .state('tab.dash', {
+    url: '/dash',
     views: {
-      'tab-locate': {
-        templateUrl: 'templates/tab-locate.html',
-        // controller: 'heatmapController'
-      }
-    }
-  })
-  .state('tab.tips', {
-    url: '/tips',
-    views: {
-      'tab-tips': {
-        templateUrl: 'templates/tab-tips.html'
-      }
-    }
-  })
-  .state('tab.feed', {
-    url: '/feed',
-    views: {
-      'tab-feed': {
-        templateUrl: 'templates/tab-feed.html'
-      }
-    }
-  })
-  .state('tab.law', {
-    url: '/law',
-    views: {
-      'tab-law': {
-        templateUrl: 'templates/tab-law.html',
-        controller: 'ChatsCtrl'
-      }
-    }
-  })
-  .state('tab.chat-detail', {
-    url: '/law/:chatId',
-    views: {
-      'tab-law': {
-        templateUrl: 'templates/chat-detail.html',
-        controller: 'ChatDetailCtrl'
-      }
-    }
-  })
-  .state('tab.menu', {
-    url: '/menu',
-    views: {
-      'tab-menu': {
-        templateUrl: 'templates/tab-menu.html',
+      'tab-dash': {
+        templateUrl: 'templates/tab-dash.html',
         controller: 'DashCtrl'
       }
     }
   })
-  .state('tab.login', {
-    url: '/menu/login',
+
+  .state('tab.chats', {
+      url: '/chats',
+      views: {
+        'tab-chats': {
+          templateUrl: 'templates/tab-chats.html',
+          controller: 'ChatsCtrl'
+        }
+      }
+    })
+    .state('tab.chat-detail', {
+      url: '/chats/:chatId',
+      views: {
+        'tab-chats': {
+          templateUrl: 'templates/chat-detail.html',
+          controller: 'ChatDetailCtrl'
+        }
+      }
+    })
+
+  .state('tab.account', {
+    url: '/account',
     views: {
-      'tab-menu': {
-        templateUrl: 'templates/tab-login.html',
-        controller: 'DashCtrl'
+      'tab-account': {
+        templateUrl: 'templates/tab-account.html',
+        controller: 'AccountCtrl'
       }
     }
-  })
-  .state('tab.signup', {
-    url: '/menu/signup',
-    views: {
-      'tab-menu': {
-        templateUrl: 'templates/tab-signup.html',
-        controller: 'DashCtrl'
-      }
-    }
-  })
-  .state('tab.others', {
-    url: '/menu/others',
-    views: {
-      'tab-menu': {
-        templateUrl: 'templates/tab-others.html',
-        controller: 'DashCtrl'
-      }
-    }
-  })
-  ;
+  });
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/tab/feed');
+  $urlRouterProvider.otherwise('/tab/dash');
+
 });
