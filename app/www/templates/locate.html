@@ -12,7 +12,7 @@
     </ion-header-bar>
 
     <ion-content>
-        <leaflet id="heat_map"></leaflet>
+        <leaflet defaults="map.defaults" center="map.center" markers="map.markers" ng-if="map"></leaflet>
     </ion-content>
     <ion-footer-bar ng-class="{expanded:$scope.isExpanded}">
         <div style="background-color:#0000FF;" class="tabs tabs-icon-top static">
