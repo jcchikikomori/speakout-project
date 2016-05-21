@@ -1,5 +1,25 @@
 angular.module('starter')
 
+/**
+ * DB services using Firebase
+ */
+.factory('fireBaseData', function($firebase) {
+    var ref = new Firebase("https://shouthack.firebaseio.com/"),
+        refUsers = new Firebase("https://shouthack.firebaseio.com/users"),
+        refFeeds = new Firebase("https://shouthack.firebaseio.com/feeds");
+    return {
+        ref: function() {
+            return ref;
+        },
+        refExpenses: function() {
+            return refExpenses;
+        },
+        refRoomMates: function() {
+            return refRoomMates;
+        }
+    }
+})
+
 .factory('InstructionsService', [ function() {
 
   var instructionsObj = {};

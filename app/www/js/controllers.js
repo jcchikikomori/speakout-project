@@ -150,6 +150,12 @@ angular.module('starter.controllers', [])
 
 })
 
+.controller('FeedCtrlOnline', function($scope, fireBaseData, $firebase) {
+    $scope.feeds = $firebase(fireBaseData.refFeeds()).$asArray();
+    console.log($scope.feeds);
+    return $scope.feeds;
+})
+
 .controller('HeatMapCtrl',
   [ '$scope',
     '$cordovaGeolocation',
