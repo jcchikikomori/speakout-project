@@ -141,8 +141,8 @@ angular.module('starter', mods)
         url: '/emergencyContacts',
         views: {
             'menuContent': {
-                templateUrl: 'templates/emergencyContacts.html',
-                controller: 'FriendsCtrl'
+                templateUrl: 'templates/emergencyContacts.html'
+                // controller: 'FriendsCtrl'
             }
             ,
 
@@ -152,8 +152,8 @@ angular.module('starter', mods)
         url: '/tips',
         views: {
             'menuContent': {
-                templateUrl: 'templates/tips.html',
-                controller: 'FriendsCtrl'
+                templateUrl: 'templates/tips.html'
+                // controller: 'FriendsCtrl'
             },
             'fabContent': {
                 template: '<button id="fab-gallery"  style="margin-bottom:40px;" class="button button-fab button-fab-bottom-right button-assertive"><i class="icon ion-android-call"></i></button>',
@@ -169,8 +169,8 @@ angular.module('starter', mods)
         url: '/law',
         views: {
             'menuContent': {
-                templateUrl: 'templates/law.html',
-                controller: 'FriendsCtrl'
+                templateUrl: 'templates/law.html'
+                // controller: 'FriendsCtrl'
             },
             'fabContent': {
                 template: '<button id="fab-gallery"  style="margin-bottom:40px;" class="button button-fab button-fab-bottom-right button-assertive"><i class="icon ion-android-call"></i></button>',
@@ -187,7 +187,7 @@ angular.module('starter', mods)
         views: {
             'menuContent': {
                 templateUrl: 'templates/about.html',
-                controller: 'FriendsCtrl'
+                controller: 'AboutCtrl'
             },
             'fabContent': {
                 template: '<button id="fab-gallery"  style="margin-bottom:40px;" class="button button-fab button-fab-bottom-right button-assertive"><i class="icon ion-android-call"></i></button>',
