@@ -1,0 +1,29 @@
+<ion-view view-title="Locate">
+    <ion-header-bar class="bar-assertive-900">
+      <h1 class="title">Map</h1>
+      <div style="" class="buttons buttons-right header-item">
+      <span class="right-buttons">
+        <button class="button button-icon button-clear ion-android-more-vertical" menu-toggle="right"></button>
+      </span>
+      </div>
+    </ion-header-bar>
+    <ion-content>
+        <leaflet></leaflet>
+    </ion-content>
+    <ion-footer-bar ng-class="{expanded:$scope.isExpanded}">
+        <div style="background-color:#0000FF;" class="tabs tabs-icon-top static">
+            <!-- <a ui-sref="app.activity" class="tab-item">
+                <i class="icon ion-android-locate" ></i> Locate
+            </a> -->
+            <a style="color:white;" ui-sref="app.locate" class="tab-item">
+                <i class="icon ion-android-locate" ></i> Locate
+            </a>
+            <a style="color:white;" ui-sref="app.feed" class="tab-item">
+                <i class="icon ion-earth"></i> Feed
+            </a>
+            <a style="color:white;" ui-sref="app.Self-Defense" class="tab-item">
+                <i class="icon ion-android-hand"></i> Self-Defense
+            </a>
+        </div>
+    </ion-footer-bar>
+</ion-view>

@@ -77,3 +77,14 @@ p {
     position: fixed;
     bottom: 0;
 }
+
+/* Custom
+==================================*/
+.bar-footer, .bar-footer .tabs {
+    height: 53px !important;
+    /*margin: 3px 0px;*/
+}
+
+.bar-footer .tabs {
+    padding-top: 3px;
+}

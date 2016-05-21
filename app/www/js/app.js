@@ -4,7 +4,7 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers', 'ionic-material', 'ionMdInput'])
+angular.module('starter', ['ionic', 'starter.controllers', 'ionic-material', 'leaflet-directive', 'ionMdInput'])
 
 .run(function($ionicPlatform) {
     $ionicPlatform.ready(function() {
@@ -73,12 +73,12 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ionic-material', 'io
         }
     })
 
-    .state('app.gallery', {
-        url: '/gallery',
+    .state('app.feed', {
+        url: '/feed',
         views: {
             'menuContent': {
                 templateUrl: 'templates/gallery.html',
-                controller: 'GalleryCtrl'
+                controller: 'FeedCtrl'
             },
             'fabContent': {
                 template: '<button id="fab-gallery"  style="margin-bottom:40px;" class="button button-fab button-fab-bottom-right button-assertive"><i class="icon ion-android-call"></i></button>',
@@ -104,23 +104,37 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ionic-material', 'io
         }
     })
 
-    .state('app.profile', {
-        url: '/profile',
+    // .state('app.profile', {
+    //     url: '/profile',
+    //     views: {
+    //         'menuContent': {
+    //             templateUrl: 'templates/profile.html',
+    //             controller: 'ProfileCtrl'
+    //         },
+    //         'fabContent': {
+    //             template: '<button id="fab-profile" style="margin-bottom:40px;" class="button button-fab button-fab-bottom-right button-assertive"><i class="icon ion-android-call"></i></button>',
+    //             controller: function ($timeout) {
+    //                 /*$timeout(function () {
+    //                     document.getElementById('fab-profile').classList.toggle('on');
+    //                 }, 800);*/
+    //             }
+    //         }
+    //     }
+    // })
+    
+    .state('app.locate', {
+        url: '/locate',
         views: {
             'menuContent': {
-                templateUrl: 'templates/profile.html',
-                controller: 'ProfileCtrl'
+                templateUrl: 'templates/locate.html',
+                controller: 'HeatMapCtrl'
             },
             'fabContent': {
-                template: '<button id="fab-profile" style="margin-bottom:40px;" class="button button-fab button-fab-bottom-right button-assertive"><i class="icon ion-android-call"></i></button>',
-                controller: function ($timeout) {
-                    /*$timeout(function () {
-                        document.getElementById('fab-profile').classList.toggle('on');
-                    }, 800);*/
-                }
+                template: '',
             }
         }
     })
+    
     .state('app.emergencyContacts', {
         url: '/emergencyContacts',
         views: {
