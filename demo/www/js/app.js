@@ -55,11 +55,11 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ionic-material', 'io
         }
     })
 
-    .state('app.friends', {
-        url: '/friends',
+    .state('app.Self-Defense', {
+        url: '/Self-Defense',
         views: {
             'menuContent': {
-                templateUrl: 'templates/friends.html',
+                templateUrl: 'templates/Self-Defense.html',
                 controller: 'FriendsCtrl'
             },
             'fabContent': {
@@ -117,6 +117,74 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ionic-material', 'io
                     /*$timeout(function () {
                         document.getElementById('fab-profile').classList.toggle('on');
                     }, 800);*/
+                }
+            }
+        }
+    })
+    .state('app.emergencyContacts', {
+        url: '/emergencyContacts',
+        views: {
+            'menuContent': {
+                templateUrl: 'templates/emergencyContacts.html',
+                controller: 'GalleryCtrl'
+            },
+            'fabContent': {
+                template: '<button id="fab-gallery"  style="margin-bottom:40px;" class="button button-fab button-fab-bottom-right button-assertive"><i class="icon ion-android-call"></i></button>',
+                controller: function ($timeout) {
+                    $timeout(function () {
+                        document.getElementById('fab-gallery').classList.toggle('on');
+                    }, 600);
+                }
+            }
+        }
+    })
+    .state('app.tips', {
+        url: '/tips',
+        views: {
+            'menuContent': {
+                templateUrl: 'templates/tips.html',
+                controller: 'GalleryCtrl'
+            },
+            'fabContent': {
+                template: '<button id="fab-gallery"  style="margin-bottom:40px;" class="button button-fab button-fab-bottom-right button-assertive"><i class="icon ion-android-call"></i></button>',
+                controller: function ($timeout) {
+                    $timeout(function () {
+                        document.getElementById('fab-gallery').classList.toggle('on');
+                    }, 600);
+                }
+            }
+        }
+    })
+    .state('app.law', {
+        url: '/law',
+        views: {
+            'menuContent': {
+                templateUrl: 'templates/law.html',
+                controller: 'GalleryCtrl'
+            },
+            'fabContent': {
+                template: '<button id="fab-gallery"  style="margin-bottom:40px;" class="button button-fab button-fab-bottom-right button-assertive"><i class="icon ion-android-call"></i></button>',
+                controller: function ($timeout) {
+                    $timeout(function () {
+                        document.getElementById('fab-gallery').classList.toggle('on');
+                    }, 600);
+                }
+            }
+        }
+    })
+    .state('app.about', {
+        url: '/about',
+        views: {
+            'menuContent': {
+                templateUrl: 'templates/about.html',
+                controller: 'GalleryCtrl'
+            },
+            'fabContent': {
+                template: '<button id="fab-gallery"  style="margin-bottom:40px;" class="button button-fab button-fab-bottom-right button-assertive"><i class="icon ion-android-call"></i></button>',
+                controller: function ($timeout) {
+                    $timeout(function () {
+                        document.getElementById('fab-gallery').classList.toggle('on');
+                    }, 600);
                 }
             }
         }
