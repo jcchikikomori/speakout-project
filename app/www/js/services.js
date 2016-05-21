@@ -2,6 +2,7 @@ angular.module('starter')
 
 /**
  * DB services using Firebase
+ * TODO: Function deprecated
  */
 .factory('fireBaseData', function($firebase) {
     var ref = new Firebase("https://shouthack.firebaseio.com/"),
@@ -11,13 +12,18 @@ angular.module('starter')
         ref: function() {
             return ref;
         },
-        refExpenses: function() {
-            return refExpenses;
+        refUsers: function() {
+            return refUsers;
         },
-        refRoomMates: function() {
-            return refRoomMates;
+        refFeeds: function() {
+            return refFeeds;
         }
     }
+})
+
+.factory('AuthService', function($firebaseAuth){
+  var ref = new Firebase("https://shouthack.firebaseio.com");
+  return $firebaseAuth(ref);
 })
 
 .factory('InstructionsService', [ function() {

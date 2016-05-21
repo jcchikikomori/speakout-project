@@ -1,16 +1,17 @@
 <ion-view view-title="Locate">
-    <ion-header-bar class="bar-assertive-900">
-      <ion-nav-buttons side="left">
-        <button ng-click="locate();" class="button button-icon icon ion-pinpoint"></button>
-      </ion-nav-buttons>
-      <h1 class="title">Map</h1>
-      <div style="" class="buttons buttons-right header-item">
-      <span class="right-buttons">
-        <button class="button button-icon button-clear ion-android-more-vertical" menu-toggle="right"></button>
-      </span>
-      </div>
-    </ion-header-bar>
-
+    <ion-nav-bar class="bar-assertive-900">
+      <ion-header-bar>
+        <ion-nav-buttons side="left">
+          <button ng-click="locate();" class="buttons button-icon icon ion-pinpoint"></button>
+        </ion-nav-buttons>
+        <h1 class="title">Map</h1>
+        <ion-nav-buttons side="right" class="buttons buttons-right header-item">
+          <span class="right-buttons">
+            <button class="button button-icon button-clear ion-android-more-vertical" menu-toggle="right"></button>
+          </span>
+        </ion-nav-buttons>
+      </ion-header-bar>
+    </ion-nav-bar>
     <ion-content>
         <leaflet defaults="map.defaults" center="map.center" markers="map.markers" ng-if="map"></leaflet>
     </ion-content>

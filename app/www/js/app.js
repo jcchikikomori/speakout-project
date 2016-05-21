@@ -1,6 +1,6 @@
 // Ionic Starter App
 
-var mods = [ 'ionic', 'starter.controllers',
+var mods = [ 'ionic', 'starter.controllers', 'ui.router',
              'ionic-material', 'firebase', 'leaflet-directive', 'ngCordova', 'ionMdInput', 'igTruncate' ];
 
 // angular.module is a global place for creating, registering and retrieving Angular modules
@@ -101,9 +101,16 @@ angular.module('starter', mods)
                 templateUrl: 'templates/login.html',
                 controller: 'LoginCtrl'
             },
-            'fabContent': {
-                template: ''
-            }
+        }
+    })
+
+    .state('app.login_post', {
+        url: '/login/post',
+        views: {
+            'menuContent': {
+                templateUrl: 'templates/login.html',
+                controller: 'LoginCtrl'
+            },
         }
     })
 

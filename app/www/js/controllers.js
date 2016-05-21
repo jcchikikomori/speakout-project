@@ -3,7 +3,16 @@
 
 angular.module('starter.controllers', [])
 
-.controller('AppCtrl', function($scope, $ionicModal, $ionicPopover, $timeout) {
+.controller('AppCtrl', function($scope, $ionicModal, $ionicPopover, $timeout, $state, AuthService) {
+
+    // Listens for changes in authentication state
+    AuthService.$onAuth(function(authData) {
+      $scope.authData = authData;
+      if (authData === false) {
+        $state.go('app.login');
+      }
+    });
+
     // Form data for the login modal
     $scope.loginData = {};
     $scope.isExpanded = false;
@@ -85,12 +94,21 @@ angular.module('starter.controllers', [])
             fabs[0].remove();
         }
     };
+
+    $scope.syncData = function(authData) {
+      //downloading for offline
+    };
+
+    $scope.getFeeds = function(data) {
+      $scope.feeds = data;
+    }
 })
 
 .controller('LoginCtrl', function($scope, $timeout, $stateParams, ionicMaterialInk) {
     $scope.$parent.clearFabs();
     $timeout(function() {
         $scope.$parent.hideHeader();
+        // ionicMaterialInk.displayEffect();
     }, 0);
     ionicMaterialInk.displayEffect();
 })
@@ -103,8 +121,8 @@ angular.module('starter.controllers', [])
 
     // Delay expansion
     $timeout(function() {
-        $scope.isExpanded = true;
-        $scope.$parent.setExpanded(true);
+        $scope.isExpanded = false;
+        $scope.$parent.setExpanded(false);
     }, 300);
 
     // Set Motion
@@ -150,10 +168,48 @@ angular.module('starter.controllers', [])
 
 })
 
-.controller('FeedCtrlOnline', function($scope, fireBaseData, $firebase) {
-    $scope.feeds = $firebase(fireBaseData.refFeeds()).$asArray();
-    console.log($scope.feeds);
-    return $scope.feeds;
+.controller('FeedCtrlOnline', function($scope) {
+  
+})
+
+.controller("AuthCtrl", function($scope, $http, $state, AuthService, $timeout, $stateParams, ionicMaterialInk) {
+  //UI Workarounds
+  $timeout(function() { $scope.$parent.hideHeader(); }, 0);
+
+  // Listens for changes in authentication state
+  AuthService.$onAuth(function(authData) {
+    $scope.authData = authData;
+    if (authData) {
+      console.log('authenticated');
+      $state.go('app.feed');
+    } else {
+      // $state.go('app.login_form');
+      $scope.$parent.clearFabs();
+      ionicMaterialInk.displayEffect();
+    }
+  });
+
+  // Logs in a user with Facebook
+  $scope.login_fb = function() {
+    AuthService.$authWithOAuthPopup("facebook").catch(function(error) {
+      console.error("Error authenticating with Facebook:", error);
+    });
+  };
+  $scope.login_gplus = function() {
+    AuthService.$authWithOAuthPopup("google").catch(function(error) {
+      console.error("Error authenticating with Google:", error);
+    });
+  };
+  $scope.login_tweet = function() {
+    AuthService.$authWithOAuthPopup("twitter").catch(function(error) {
+      console.error("Error authenticating with Twitter:", error);
+    });
+  };
+  // Logs out the logged-in user
+  $scope.logout = function() {
+    AuthService.$unauth();
+  };
+
 })
 
 .controller('HeatMapCtrl',
