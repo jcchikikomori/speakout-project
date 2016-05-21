@@ -1,5 +1,5 @@
 {
-  "name": "sample",
+  "name": "ShoutOut",
   "private": "true",
   "devDependencies": {
     "ionic": "driftyco/ionic-bower#1.0.0-rc.2",
@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "ngCordova": "^0.1.26-alpha",
-    "robotodraft": "^1.1.0"
+    "robotodraft": "^1.1.0",
+    "angular-leaflet-directive": "^0.10.0"
   }
 }
