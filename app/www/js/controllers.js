@@ -39,7 +39,7 @@ angular.module('starter.controllers', [])
     };
 
     $scope.setExpanded = function(bool) {
-        $scope.isExpanded = bool;
+        $scope.isExpanded = false;
     };
 
     $scope.setHeaderFab = function(location) {
