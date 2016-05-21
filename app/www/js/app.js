@@ -121,7 +121,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ionic-material', 'le
     //         }
     //     }
     // })
-    
+
     .state('app.locate', {
         url: '/locate',
         views: {
@@ -134,22 +134,16 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ionic-material', 'le
             }
         }
     })
-    
+
     .state('app.emergencyContacts', {
         url: '/emergencyContacts',
         views: {
             'menuContent': {
                 templateUrl: 'templates/emergencyContacts.html',
-                controller: 'GalleryCtrl'
-            },
-            'fabContent': {
-                template: '<button id="fab-gallery"  style="margin-bottom:40px;" class="button button-fab button-fab-bottom-right button-assertive"><i class="icon ion-android-call"></i></button>',
-                controller: function ($timeout) {
-                    $timeout(function () {
-                        document.getElementById('fab-gallery').classList.toggle('on');
-                    }, 600);
-                }
+                controller: 'FriendsCtrl'
             }
+            ,
+
         }
     })
     .state('app.tips', {
@@ -157,7 +151,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ionic-material', 'le
         views: {
             'menuContent': {
                 templateUrl: 'templates/tips.html',
-                controller: 'GalleryCtrl'
+                controller: 'FriendsCtrl'
             },
             'fabContent': {
                 template: '<button id="fab-gallery"  style="margin-bottom:40px;" class="button button-fab button-fab-bottom-right button-assertive"><i class="icon ion-android-call"></i></button>',
@@ -174,7 +168,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ionic-material', 'le
         views: {
             'menuContent': {
                 templateUrl: 'templates/law.html',
-                controller: 'GalleryCtrl'
+                controller: 'FriendsCtrl'
             },
             'fabContent': {
                 template: '<button id="fab-gallery"  style="margin-bottom:40px;" class="button button-fab button-fab-bottom-right button-assertive"><i class="icon ion-android-call"></i></button>',
@@ -191,7 +185,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ionic-material', 'le
         views: {
             'menuContent': {
                 templateUrl: 'templates/about.html',
-                controller: 'GalleryCtrl'
+                controller: 'FriendsCtrl'
             },
             'fabContent': {
                 template: '<button id="fab-gallery"  style="margin-bottom:40px;" class="button button-fab button-fab-bottom-right button-assertive"><i class="icon ion-android-call"></i></button>',
