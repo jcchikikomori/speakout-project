@@ -1,0 +1,26 @@
+[
+ {
+   "id":23,
+   "content":"HELLO WORLD",
+   "user_id":1,
+   "timedate":"2016-05-21 00:00:00"
+ },
+ {
+   "id":24,
+   "content":"Na report ko siya. Salamat sa tulong niyo! God Bless! :)",
+   "user_id":1,
+   "timedate":"2016-05-21 00:00:00"
+ },
+ {
+   "id":46,
+   "content":"Found suspicious activity in Kapitolyo, Pasig City",
+   "user_id":2,
+   "timedate":"2016-05-21 00:00:00"
+ },
+ {
+   "id":46,
+   "content":"New Modus called-- The Running Man",
+   "user_id":2,
+   "timedate":"2016-05-21 00:00:00"
+ }
+]
