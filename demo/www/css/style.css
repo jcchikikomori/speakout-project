@@ -31,7 +31,7 @@ p {
 }
 
 .menu-open .bar.bar-header.expanded {
-    background-color: #222;
+    background-color: #1F45E9;
 }
 
 .menu h2 {
@@ -65,7 +65,7 @@ p {
 ==================================*/
 .app-icon {
     background-color: #fff;
-    background: url('../img/crown.jpg') center;
+    background: url('../img/speakout.jpg') center;
     background-size: cover;
     border-radius: 50%;
     height: 125px;
