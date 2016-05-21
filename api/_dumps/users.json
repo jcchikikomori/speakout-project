@@ -1,0 +1,32 @@
+[
+ {
+   "id":1,
+   "user_name":"jccultima123",
+   "user_password":"40bd001563085fc35165329ea1ff5c5ecbdbbeef",
+   "email":"johncyrillcorsanes@gmail.com",
+   "first_name":"John Cyrill",
+   "middle_name":"Cumpio",
+   "last_name":"Corsanes",
+   "gender":"Male",
+   "birthday":"08/09/1995",
+   "contact_no":9485024618,
+   "active":0,
+   "account_type":1,
+   "timedate":null
+ },
+ {
+   "id":931336,
+   "user_name":"piayepes",
+   "user_password":"40bd001563085fc35165329ea1ff5c5ecbdbbeef",
+   "email":"pia.yepes@gmail.com",
+   "first_name":"Pia",
+   "middle_name":"Jasilla",
+   "last_name":"Yepes",
+   "gender":"Female",
+   "birthday":"02/12/1995",
+   "contact_no":9231000321,
+   "active":1,
+   "account_type":1,
+   "timedate":"2016-05-21 00:00:00"
+ }
+]
