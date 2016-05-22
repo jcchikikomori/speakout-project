@@ -238,15 +238,15 @@ angular.module('starter.controllers', [])
         $scope.locations = LocationsService.savedLocations;
         $scope.newLocation;
 
-        if(!InstructionsService.instructions.newLocations.seen) {
-          var instructionsPopup = $ionicPopup.alert({
-            title: 'Add Locations',
-            template: InstructionsService.instructions.newLocations.text
-          });
-          instructionsPopup.then(function(res) {
-            InstructionsService.instructions.newLocations.seen = true;
-          });
-        }
+        // if(!InstructionsService.instructions.newLocations.seen) {
+        //   var instructionsPopup = $ionicPopup.alert({
+        //     title: 'Add Locations',
+        //     template: InstructionsService.instructions.newLocations.text
+        //   });
+        //   instructionsPopup.then(function(res) {
+        //     InstructionsService.instructions.newLocations.seen = true;
+        //   });
+        // }
 
         $scope.map = {
           center: {
