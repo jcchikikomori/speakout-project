@@ -168,7 +168,7 @@ angular.module('starter.controllers', [])
 
 })
 
-.controller('FeedCtrlOnline', function($scope) {
+.controller('FeedCtrlOnline', function($scope, FeedService) {
   
 })
 

@@ -26,6 +26,11 @@ angular.module('starter')
   return $firebaseAuth(ref);
 })
 
+.factory('FeedService', function($firebaseAuth){
+  var ref = new Firebase("https://shouthack.firebaseio.com/feeds");
+  return $firebaseAuth(ref);
+})
+
 .factory('InstructionsService', [ function() {
 
   var instructionsObj = {};
