@@ -258,6 +258,30 @@ angular.module('starter', mods)
             }
         }
     })
+    .state('app.law1', {
+        url: '/law1',
+        views: {
+            'menuContent': {
+                templateUrl: 'templates/law1.html'
+            }
+        }
+    })
+    .state('app.law2', {
+        url: '/law2',
+        views: {
+            'menuContent': {
+                templateUrl: 'templates/law2.html'
+            }
+        }
+    })
+    .state('app.law3', {
+        url: '/law3',
+        views: {
+            'menuContent': {
+                templateUrl: 'templates/law3.html'
+            }
+        }
+    })
     .state('app.about', {
         url: '/about',
         views: {
