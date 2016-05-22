@@ -40,6 +40,64 @@ angular.module('starter', mods)
         controller: 'AppCtrl'
     })
 
+    .state('app.welcome', {
+        url: '/welcome',
+        views: {
+            'menuContent': {
+                templateUrl: 'templates/welcome.html'
+            }
+        }
+    })
+    .state('app.feature1', {
+        url: '/feature1',
+        views: {
+            'menuContent': {
+                templateUrl: 'templates/feature1.html'
+            }
+        }
+    }).state('app.feature2', {
+        url: '/feature2',
+        views: {
+            'menuContent': {
+                templateUrl: 'templates/feature2.html'
+            }
+        }
+    }).state('app.feature3', {
+        url: '/feature3',
+        views: {
+            'menuContent': {
+                templateUrl: 'templates/feature3.html'
+            }
+        }
+    }).state('app.feature4', {
+        url: '/feature4',
+        views: {
+            'menuContent': {
+                templateUrl: 'templates/feature4.html'
+            }
+        }
+    }).state('app.feature5', {
+        url: '/feature5',
+        views: {
+            'menuContent': {
+                templateUrl: 'templates/feature5.html'
+            }
+        }
+    }).state('app.feature6', {
+        url: '/feature6',
+        views: {
+            'menuContent': {
+                templateUrl: 'templates/feature6.html'
+            }
+        }
+    }).state('app.feature7', {
+        url: '/feature7',
+        views: {
+            'menuContent': {
+                templateUrl: 'templates/feature7.html'
+            }
+        }
+    })
     .state('app.activity', {
         url: '/activity',
         views: {
@@ -141,7 +199,7 @@ angular.module('starter', mods)
     //         }
     //     }
     // })
-    
+
     .state('app.locate', {
         url: '/locate',
         views: {
@@ -154,30 +212,24 @@ angular.module('starter', mods)
             }
         }
     })
-    
+
     .state('app.emergencyContacts', {
         url: '/emergencyContacts',
         views: {
             'menuContent': {
-                templateUrl: 'templates/emergencyContacts.html',
-                controller: 'GalleryCtrl'
-            },
-            'fabContent': {
-                template: '<button id="fab-gallery"  style="margin-bottom:40px;" class="button button-fab button-fab-bottom-right button-assertive"><i class="icon ion-android-call"></i></button>',
-                controller: function ($timeout) {
-                    $timeout(function () {
-                        document.getElementById('fab-gallery').classList.toggle('on');
-                    }, 600);
-                }
+                templateUrl: 'templates/emergencyContacts.html'
+                // controller: 'FriendsCtrl'
             }
+            ,
+
         }
     })
     .state('app.tips', {
         url: '/tips',
         views: {
             'menuContent': {
-                templateUrl: 'templates/tips.html',
-                controller: 'GalleryCtrl'
+                templateUrl: 'templates/tips.html'
+                // controller: 'FriendsCtrl'
             },
             'fabContent': {
                 template: '<button id="fab-gallery"  style="margin-bottom:40px;" class="button button-fab button-fab-bottom-right button-assertive"><i class="icon ion-android-call"></i></button>',
@@ -193,8 +245,8 @@ angular.module('starter', mods)
         url: '/law',
         views: {
             'menuContent': {
-                templateUrl: 'templates/law.html',
-                controller: 'GalleryCtrl'
+                templateUrl: 'templates/law.html'
+                // controller: 'FriendsCtrl'
             },
             'fabContent': {
                 template: '<button id="fab-gallery"  style="margin-bottom:40px;" class="button button-fab button-fab-bottom-right button-assertive"><i class="icon ion-android-call"></i></button>',
@@ -211,7 +263,7 @@ angular.module('starter', mods)
         views: {
             'menuContent': {
                 templateUrl: 'templates/about.html',
-                controller: 'GalleryCtrl'
+                controller: 'AboutCtrl'
             },
             'fabContent': {
                 template: '<button id="fab-gallery"  style="margin-bottom:40px;" class="button button-fab button-fab-bottom-right button-assertive"><i class="icon ion-android-call"></i></button>',

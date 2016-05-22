@@ -48,7 +48,7 @@ angular.module('starter.controllers', [])
     };
 
     $scope.setExpanded = function(bool) {
-        $scope.isExpanded = bool;
+        $scope.isExpanded = false;
     };
 
     $scope.setHeaderFab = function(location) {
@@ -111,6 +111,10 @@ angular.module('starter.controllers', [])
         // ionicMaterialInk.displayEffect();
     }, 0);
     ionicMaterialInk.displayEffect();
+})
+
+.controller('AboutCtrl', function($scope, $timeout, $stateParams, ionicMaterialInk) {
+    $scope.$parent.showHeader();
 })
 
 .controller('FriendsCtrl', function($scope, $stateParams, $timeout, ionicMaterialInk, ionicMaterialMotion) {

@@ -1,88 +1,52 @@
-<ion-view view-title="Feed">
+<ion-view view-title="Feed"  style="background: url(img/bgAll.png) center; background-size: cover;padding-top:10px;">
     <ion-content ng-class="{expanded:isExpanded}" class="animate-fade-slide-in">
-        <div class="list half">
-            <div ui-sref="app.profile" class="card card-gallery item item-text-wrap">
+        <div style="width:100%;margin-right:5px;">
+            <!-- <div ui-sref="app.profile" class="card card-gallery item item-text-wrap">
                 <div class="ink dark-bg">
                     <h2>Where's Elsa?</h2>
                     <img class="full-image" src="img/sansa-snowcastle3.jpg">
                 </div>
-                <div class="item tabs tabs-secondary tabs-icon-left">
-                    <a class="tab-item stable-bg assertive">
+                <div class="item tabs tabs-secondary tabs-icon-left"> -->
+                    <!-- <a class="tab-item stable-bg assertive">
                         <i class="icon ion-heart"></i>
                         4
-                    </a>
-                    <a class="tab-item stable-bg positive-900">
+                    </a> -->
+                    <!-- <a class="tab-item stable-bg positive-900">
                         <i class="icon ion-chatbubbles"></i>
-                        2
+
                     </a>
                 </div>
-            </div>
-            <div ui-sref="app.profile" class="card card-gallery item item-text-wrap">
-                <div class="ink dark-bg">
-                    <h2>Hmm. Hope nobody destroys this!</h2>
-                    <img class="full-image" src="img/sansa-snowcastle.png">
-                </div>
-                <div class="item tabs tabs-secondary tabs-icon-left">
-                    <a class="tab-item stable-bg assertive">
-                        <i class="icon ion-heart"></i>
-                        6
-                    </a>
-                    <a class="tab-item stable-bg positive-900">
-                        <i class="icon ion-chatbubbles"></i>
-                        1
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="list half">
-            <div ui-sref="app.profile" class="card card-gallery item item-text-wrap">
-                <div class="ink dark-bg">
-                    <h2>Making Olaf a House</h2>
-                    <img class="full-image" src="img/sansa-snowcastle2.jpg">
-                </div>
-                <div class="item tabs tabs-secondary tabs-icon-left">
-                    <a class="tab-item stable-bg assertive">
-                        <i class="icon ion-heart"></i>
-                        22
-                    </a>
-                    <a class="tab-item stable-bg positive-900">
-                        <i class="icon ion-chatbubbles"></i>
-                        9
-                    </a>
-                </div>
-            </div>
-            <div ui-sref="app.profile" class="card card-gallery item item-text-wrap">
-                <div class="ink dark-bg">
-                    <h2>ohai!</h2>
-                    <img class="full-image" src="img/sansa-snowcastle4.jpg">
-                </div>
-                <div class="item tabs tabs-secondary tabs-icon-left">
-                    <a class="tab-item stable-bg assertive">
-                        <i class="icon ion-heart"></i>
-                        8
-                    </a>
-                    <a class="tab-item stable-bg positive-900">
-                        <i class="icon ion-chatbubbles"></i>
-                        0
-                    </a>
-                </div>
-            </div>
+            </div> -->
+            <div class="list card stable-bg">
+              <div class="item item-avatar">
+                 <img src="img/arya.jpg"> <h2>FILA</h2>
+                  <p>"Philippines"</p>
+                </div> <div class="item item-body"> <b>WELCOME!</b>
+                  This mobile application lets women connect to an online community for women. Whereas they can post and report any example of sexual harassment in the city/ street. With the help of this app, women can also be aware of the rights and laws for women. The app, also give tips and trivias about women and letting the user to be fully prepared to prevent such sexual harassment when the situation comes. Users can watch video tutorial on self defense and things they need to be fully equiped. Because this application believes that every women must stand for their self, know where to stand Women need to break the silence to stop violence. Learn more and get involved.
+
+                   <p> <a class="subdued">1 Like</a> <a class="subdued">5 Comments</a> </p>
+                 </div> <div class="item tabs tabs-secondary tabs-icon-left">
+                    <a class="tab-item" data-ink-color="#336699" data-ink-opacity="0.5">
+                       <i class="icon ion-thumbsup"></i> Like </a>
+                       <a class="tab-item" data-ink-color="#336699" data-ink-opacity="0.5"> <i class="icon ion-chatbox"></i> Comment </a>
+                       <a class="tab-item" data-ink-color="#336699" data-ink-opacity="0.5"> <i class="icon ion-share"></i> Share </a> </div> </div>
+
         </div>
     </ion-content>
     <ion-footer-bar ng-class="{expanded:$scope.isExpanded}">
-        <div style="background-color:#0000FF;" class="tabs tabs-icon-top static">
-            <!-- <a ui-sref="app.activity" class="tab-item">
-                <i class="icon ion-android-locate" ></i> Locate
-            </a> -->
-            <a style="color:white;" ui-sref="app.locate" class="tab-item">
-                <i class="icon ion-android-locate" ></i> Locate
-            </a>
-            <a style="color:white;" ui-sref="app.feed" class="tab-item">
-                <i class="icon ion-earth"></i> Feed
-            </a>
-            <a style="color:white;" ui-sref="app.Self-Defense" class="tab-item">
-                <i class="icon ion-android-hand"></i> Self-Defense
-            </a>
-        </div>
+      <div style="background-color:#0000FF;" class="tabs tabs-icon-top static">
+          <!-- <a ui-sref="app.activity" class="tab-item">
+              <i class="icon ion-android-locate" ></i> Locate
+          </a> -->
+          <a style="color:white;" ui-sref="app.locate" class="tab-item">
+              <i class="icon ion-android-locate" ></i> Locate
+          </a>
+          <a style="color:white;" ui-sref="app.feed" class="tab-item">
+              <i class="icon ion-earth"></i> Feed
+          </a>
+          <a style="color:white;" ui-sref="app.Self-Defense" class="tab-item">
+            <i class="icon ion-android-hand"></i> Self-Defense
+          </a>
+      </div>
     </ion-footer-bar>
 </ion-view>
